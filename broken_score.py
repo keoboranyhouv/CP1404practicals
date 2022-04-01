@@ -1,14 +1,9 @@
-"""
-CP1404/CP5632 - Practical
-Broken program to determine score status
-"""
-
-# TODO: Fix this!
-
-score = float(input("Enter score: "))
+def main():
+    score = float(input("Enter score: "))
+    generate_results(score)
 
 
-def generate_results():
+def generate_results(score):
     if 0 <= score <= 100:
         if score >= 90:
             print("Excellent")
@@ -20,6 +15,5 @@ def generate_results():
         print("Invalid score!")
 
 
-generate_results()
-
-    
+if __name__ == '__main__':
+    main()
