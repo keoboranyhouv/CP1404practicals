@@ -4,13 +4,20 @@ MIN_LENGTH = 10
 
 def main():
     """Program to get and check a user's password."""
-    print("Please enter a password")
+    password = get_password()
+    print_asterisks(password)
 
-    password = input("> ")
+
+def print_asterisks(password):
     while not is_valid_password(password):
         print("*" * len(password))
         password = input("> ")
 
+
+def get_password():
+    print("Please enter a password")
+    password = input("> ")
+    return password
 
 
 def is_valid_password(password):
